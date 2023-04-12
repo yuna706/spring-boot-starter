@@ -1,7 +1,5 @@
 # intellij
-/spring-project-start/.idea
-/yuna-spring-boot-starter/.idea
+*/.idea
 
 # srping
-/spring-project-start/target
-/yuna-spring-boot-starter/target
+*/target
