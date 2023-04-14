@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @author 이유나
  * @since 2023.04.13
  */
-@Component
+//@Component
 public class SampleArgs {
     public SampleArgs(ApplicationArguments arguments){
         System.out.println("foo: " + arguments.containsOption("foo"));
