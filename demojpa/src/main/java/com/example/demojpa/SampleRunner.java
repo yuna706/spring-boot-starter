@@ -21,13 +21,17 @@ public class SampleRunner implements ApplicationRunner {
 //    private int age;
 
     @Autowired
-    YunaProperties yunaProperties;
+    private String hello;
+
+    @Autowired
+    private YunaProperties yunaProperties;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println("+++++++++++++++");
+        System.out.println(hello);
         System.out.println(yunaProperties.getName());
-        System.out.println(yunaProperties.getAge());
+        System.out.println(yunaProperties.getFullName());
         System.out.println("+++++++++++++++");
     }
 }

@@ -1,7 +1,9 @@
 package com.example.demojpa;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
 /**
  * YunaPropperties.java
@@ -11,8 +13,10 @@ import org.springframework.stereotype.Component;
  * @since 2023.04.14
  */
 @Component
+@Validated
 @ConfigurationProperties("yuna")
 public class YunaProperties {
+    @NonNull
     private String name;
     private int age;
     private String fullName;

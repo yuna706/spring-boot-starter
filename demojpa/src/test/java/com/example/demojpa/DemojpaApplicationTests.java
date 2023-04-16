@@ -11,8 +11,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
-//@TestPropertySource(properties = "yuna.name=잉융낭2")
-@TestPropertySource(locations = "classpath:/test.properties")
+@TestPropertySource(properties = "yuna.name=잉융낭2")
+//@TestPropertySource(locations = "classpath:/test.properties")
 //@SpringBootTest(properties = "yuna.name=잉융낭")
 @SpringBootTest
 class DemojpaApplicationTests {
