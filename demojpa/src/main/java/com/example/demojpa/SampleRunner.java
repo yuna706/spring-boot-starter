@@ -1,6 +1,6 @@
 package com.example.demojpa;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -14,17 +14,20 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class SampleRunner implements ApplicationRunner {
-    @Value("${yuna.name}")
-    private String name;
+//    @Value("${yuna.name}")
+//    private String name;
+//
+//    @Value("${yuna.age}")
+//    private int age;
 
-    @Value("${yuna.age}")
-    private int age;
+    @Autowired
+    YunaProperties yunaProperties;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println("+++++++++++++++");
-        System.out.println(name);
-        System.out.println(age);
+        System.out.println(yunaProperties.getName());
+        System.out.println(yunaProperties.getAge());
         System.out.println("+++++++++++++++");
     }
 }
