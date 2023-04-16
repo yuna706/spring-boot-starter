@@ -32,10 +32,10 @@ public class SampleRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        logger.info("+++++++++++++++");
-        logger.info(hello);
-        logger.info(yunaProperties.getName());
-        logger.info(yunaProperties.getFullName());
-        logger.info("+++++++++++++++");
+        logger.debug("+++++++++++++++");
+        logger.debug(hello);
+        logger.debug(yunaProperties.getName());
+        logger.debug(yunaProperties.getFullName());
+        logger.debug("+++++++++++++++");
     }
 }
