@@ -17,8 +17,8 @@ import java.sql.Statement;
  * @author 이유나
  * @since 2023.04.20
  */
-//@Component
-public class H2Runner implements ApplicationRunner {
+@Component
+public class MySqlRunner implements ApplicationRunner {
     @Autowired
     DataSource dataSource;
 
@@ -28,8 +28,9 @@ public class H2Runner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         try(Connection connection = dataSource.getConnection()){
-            connection.getMetaData().getURL();
-            connection.getMetaData().getUserName();
+            System.out.println(connection.getMetaData().getClass());
+            System.out.println(connection.getMetaData().getURL());
+            System.out.println(connection.getMetaData().getUserName());
 
             Statement statement = connection.createStatement();
             String sql = "CREATE TABLE USERS(id integer NOT NULL, name varchar(255), PRIMARY KEY (id))";
