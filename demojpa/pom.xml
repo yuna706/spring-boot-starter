@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>spring-boot-start</artifactId>
-        <groupId>com.yuna</groupId>
+        <groupId>com.example</groupId>
         <version>${revision}</version>
     </parent>
     <groupId>com.example</groupId>
