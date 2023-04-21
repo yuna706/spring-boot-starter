@@ -11,14 +11,14 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 /**
- * MySqlRunner.java
- * MySql 커넥션을 위한 클래스
+ * PgSqlRunner.java
+ * postgreSQL 커넥션을 위한 클래스
  *
  * @author 이유나
- * @since 2023.04.20
+ * @since 2023.04.21
  */
-//@Component
-public class MySqlRunner implements ApplicationRunner {
+@Component
+public class PgSqlRunner implements ApplicationRunner {
     @Autowired
     DataSource dataSource;
 
@@ -33,10 +33,10 @@ public class MySqlRunner implements ApplicationRunner {
             System.out.println(connection.getMetaData().getUserName());
 
             Statement statement = connection.createStatement();
-            String sql = "CREATE TABLE USERS(id integer NOT NULL, name varchar(255), PRIMARY KEY (id))";
+            String sql = "CREATE TABLE account(id integer NOT NULL, name varchar(255), PRIMARY KEY (id))";
             statement.executeUpdate(sql);
         }
 
-        jdbcTemplate.execute("INSERT INTO USERS VALUES (1, 'yuna')");
+        jdbcTemplate.execute("INSERT INTO account VALUES (1, 'yuna')");
     }
 }
