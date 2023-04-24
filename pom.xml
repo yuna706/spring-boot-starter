@@ -18,6 +18,7 @@
 
     <modules>
         <module>demo-spring-data</module>
+        <module>demo-spring-jpa</module>
         <module>demo-spring-mvc</module>
         <module>demojpa</module>
         <module>spring-boot-cors</module>
