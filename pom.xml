@@ -20,6 +20,7 @@
         <module>demo-spring-data</module>
         <module>demo-spring-jpa</module>
         <module>demo-spring-mvc</module>
+        <module>demo-spring-redis</module>
         <module>demojpa</module>
         <module>spring-boot-cors</module>
         <module>spring-boot-exception</module>
