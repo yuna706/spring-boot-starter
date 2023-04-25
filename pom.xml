@@ -19,6 +19,7 @@
     <modules>
         <module>demo-spring-data</module>
         <module>demo-spring-jpa</module>
+        <module>demo-spring-mongo</module>
         <module>demo-spring-mvc</module>
         <module>demo-spring-redis</module>
         <module>demojpa</module>
